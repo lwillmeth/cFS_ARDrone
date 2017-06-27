@@ -1,0 +1,2 @@
+set sysroot /home/cfs/drone_sysroot
+handle SIG63 nostop noprint pass

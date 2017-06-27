@@ -1,0 +1,288 @@
+# 
+# cfe-sb-stats-tlm.txt
+# 
+# This file should have the following comma delimited fields:
+#   1. Data item description
+#   2. Offset of data item in packet
+#   3. Length of data item
+#   4. Python data type of item ( using python struct library )
+#   5. Display type of item ( Currently Dec, Hex, Str, Enm ) 
+#   6. Display string for enumerated value 0 ( or NULL if none ) 
+#   7. Display string for enumerated value 1 ( or NULL if none ) 
+#   8. Display string for enumerated value 2 ( or NULL if none ) 
+#   9. Display string for enumerated value 3 ( or NULL if none ) 
+# 
+#  Note(1): A line that begins with # is a comment
+#  Note(2): Remove any blank lines from the end of the file
+#
+Msg IDs In Use,         12,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Peak Msg IDs In Use,    16,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Max Msg IDs Allowed,    20,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Pipes In Use,           24,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Peak Pipes In Use,      28,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Max Pipes Allowed,      32,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Mem In Use,             36,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Peak Mem In Use,        40,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Max Mem Allowed,        44,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Subscriptions In Use,   48,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Peak Subs In Use,       52,     4,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+Max Subs Allowed,       56,     4,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+Buffers In Use          60,     4,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+Peak Buffers In Use,    64,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Max Pipe Depth Allowed, 68,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+0:  Pipe ID,            72,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+0:  Depth,              76,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+0:  In Use,             80,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+0:  Peak In Use,        84,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+1:  Pipe ID,            88,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+1:  Depth,              92,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+1:  In Use,             96,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+1:  Peak In Use,        100,    2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+2:  Pipe ID,            86,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+2:  Depth,              88,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+2:  In Use,             90,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+2:  Peak In Use,        92,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+3:  Pipe ID,            94,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+3:  Depth,              96,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+3:  In Use,             98,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+3:  Peak In Use,        100,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+4:  Pipe ID,            102,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+4:  Depth,              104,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+4:  In Use,             106,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+4:  Peak In Use,        108,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+5:  Pipe ID,            110,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+5:  Depth,              112,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+5:  In Use,             114,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+5:  Peak In Use,        116,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+6:  Pipe ID,            118,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+6:  Depth,              120,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+6:  In Use,             122,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+6:  Peak In Use,        124,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+7:  Pipe ID,            126,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+7:  Depth,              128,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+7:  In Use,             130,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+7:  Peak In Use,        132,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+8:  Pipe ID,            134,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+8:  Depth,              136,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+8:  In Use,             138,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+8:  Peak In Use,        140,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+9:  Pipe ID,            142,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+9:  Depth,              144,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+9:  In Use,             146,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+9:  Peak In Use,        148,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+10:  Pipe ID,           150,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+10:  Depth,             152,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+10:  In Use,            154,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+10:  Peak In Use,       156,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+11:  Pipe ID,           158,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+11:  Depth,             160,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+11:  In Use,            162,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+11:  Peak In Use,       164,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+12:  Pipe ID,           166,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+12:  Depth,             168,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+12:  In Use,            170,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+12:  Peak In Use,       172,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+13:  Pipe ID,           174,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+13:  Depth,             176,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+13:  In Use,            178,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+13:  Peak In Use,       180,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+14:  Pipe ID,           182,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+14:  Depth,             184,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+14:  In Use,            186,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+14:  Peak In Use,       188,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+15:  Pipe ID,           190,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+15:  Depth,             192,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+15:  In Use,            194,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+15:  Peak In Use,       196,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+16:  Pipe ID,           198,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+16:  Depth,             200,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+16:  In Use,            202,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+16:  Peak In Use,       204,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+17:  Pipe ID,           206,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+17:  Depth,             208,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+17:  In Use,            210,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+17:  Peak In Use,       212,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+18:  Pipe ID,           214,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+18:  Depth,             216,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+18:  In Use,            218,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+18:  Peak In Use,       220,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+19:  Pipe ID,           222,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+19:  Depth,             224,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+19:  In Use,            226,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+19:  Peak In Use,       228,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+20:  Pipe ID,           230,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+20:  Depth,             232,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+20:  In Use,            234,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+20:  Peak In Use,       236,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+21:  Pipe ID,           238,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+21:  Depth,             240,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+21:  In Use,            242,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+21:  Peak In Use,       244,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+22:  Pipe ID,           246,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+22:  Depth,             248,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+22:  In Use,            250,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+22:  Peak In Use,       252,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+23:  Pipe ID,           254,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+23:  Depth,             256,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+23:  In Use,            258,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+23:  Peak In Use,       260,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+24:  Pipe ID,           262,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+24:  Depth,             264,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+24:  In Use,            266,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+24:  Peak In Use,       268,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+25:  Pipe ID,           270,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+25:  Depth,             272,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+25:  In Use,            274,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+25:  Peak In Use,       276,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+26:  Pipe ID,           278,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+26:  Depth,             280,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+26:  In Use,            282,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+26:  Peak In Use,       284,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+27:  Pipe ID,           286,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+27:  Depth,             288,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+27:  In Use,            290,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+27:  Peak In Use,       292,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+28:  Pipe ID,           294,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+28:  Depth,             296,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+28:  In Use,            298,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+28:  Peak In Use,       300,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+29:  Pipe ID,           302,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+29:  Depth,             304,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+29:  In Use,            306,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+29:  Peak In Use,       308,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+30:  Pipe ID,           310,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+30:  Depth,             312,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+30:  In Use,            314,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+30:  Peak In Use,       316,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+31:  Pipe ID,           318,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+31:  Depth,             320,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+31:  In Use,            322,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+31:  Peak In Use,       324,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+32:  Pipe ID,           326,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+32:  Depth,             328,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+32:  In Use,            330,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+32:  Peak In Use,       332,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+33:  Pipe ID,           334,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+33:  Depth,             336,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+33:  In Use,            338,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+33:  Peak In Use,       340,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+34:  Pipe ID,           342,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+34:  Depth,             344,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+34:  In Use,            346,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+34:  Peak In Use,       348,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+35:  Pipe ID,           350,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+35:  Depth,             352,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+35:  In Use,            354,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+35:  Peak In Use,       356,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+36:  Pipe ID,           358,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+36:  Depth,             360,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+36:  In Use,            362,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+36:  Peak In Use,       364,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+37:  Pipe ID,           366,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+37:  Depth,             368,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+37:  In Use,            370,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+37:  Peak In Use,       372,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+38:  Pipe ID,           374,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+38:  Depth,             376,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+38:  In Use,            378,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+38:  Peak In Use,       380,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+39:  Pipe ID,           382,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+39:  Depth,             384,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+39:  In Use,            386,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+39:  Peak In Use,       388,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+40:  Pipe ID,           390,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+40:  Depth,             392,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+40:  In Use,            394,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+40:  Peak In Use,       396,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+41:  Pipe ID,           398,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+41:  Depth,             400,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+41:  In Use,            402,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+41:  Peak In Use,       404,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+42:  Pipe ID,           406,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+42:  Depth,             408,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+42:  In Use,            410,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+42:  Peak In Use,       412,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+43:  Pipe ID,           414,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+43:  Depth,             416,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+43:  In Use,            418,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+43:  Peak In Use,       420,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+44:  Pipe ID,           422,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+44:  Depth,             424,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+44:  In Use,            426,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+44:  Peak In Use,       428,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+45:  Pipe ID,           430,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+45:  Depth,             432,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+45:  In Use,            434,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+45:  Peak In Use,       436,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+46:  Pipe ID,           438,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+46:  Depth,             440,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+46:  In Use,            442,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+46:  Peak In Use,       444,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+47:  Pipe ID,           446,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+47:  Depth,             448,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+47:  In Use,            450,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+47:  Peak In Use,       452,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+48:  Pipe ID,           454,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+48:  Depth,             456,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+48:  In Use,            458,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+48:  Peak In Use,       460,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+49:  Pipe ID,           462,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+49:  Depth,             464,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+49:  In Use,            466,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+49:  Peak In Use,       468,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+50:  Pipe ID,           470,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+50:  Depth,             472,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+50:  In Use,            474,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+50:  Peak In Use,       476,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+51:  Pipe ID,           478,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+51:  Depth,             480,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+51:  In Use,            482,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+51:  Peak In Use,       484,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+52:  Pipe ID,           486,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+52:  Depth,             488,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+52:  In Use,            490,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+52:  Peak In Use,       492,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+53:  Pipe ID,           494,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+53:  Depth,             496,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+53:  In Use,            498,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+53:  Peak In Use,       500,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+54:  Pipe ID,           502,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+54:  Depth,             504,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+54:  In Use,            506,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+54:  Peak In Use,       508,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+55:  Pipe ID,           510,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+55:  Depth,             512,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+55:  In Use,            514,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+55:  Peak In Use,       516,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+56:  Pipe ID,           518,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+56:  Depth,             520,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+56:  In Use,            522,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+56:  Peak In Use,       524,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+57:  Pipe ID,           526,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+57:  Depth,             528,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+57:  In Use,            530,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+57:  Peak In Use,       532,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+58:  Pipe ID,           534,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+58:  Depth,             536,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+58:  In Use,            538,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+58:  Peak In Use,       540,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+59:  Pipe ID,           542,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+59:  Depth,             544,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+59:  In Use,            546,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+59:  Peak In Use,       548,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+60:  Pipe ID,           550,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+60:  Depth,             552,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+60:  In Use,            554,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+60:  Peak In Use,       556,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+61:  Pipe ID,           558,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+61:  Depth,             560,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+61:  In Use,            562,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+61:  Peak In Use,       564,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+62:  Pipe ID,           566,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+62:  Depth,             568,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+62:  In Use,            570,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+62:  Peak In Use,       572,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+63:  Pipe ID,           574,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+63:  Depth,             576,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+63:  In Use,            578,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+63:  Peak In Use,       580,     2,      B,  Dec,    NULL,   NULL,       NULL,   NULL

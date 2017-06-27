@@ -1,0 +1,39 @@
+# 
+# cfs-sch-hk-tlm.txt
+# 
+# This file should have the following comma delimited fields:
+#   1. Data item description
+#   2. Offset of data item in packet
+#   3. Length of data item
+#   4. Python data type of item ( using python struct library )
+#   5. Display type of item ( Currently Dec, Hex, Str, Enm ) 
+#   6. Display string for enumerated value 0 ( or NULL if none ) 
+#   7. Display string for enumerated value 1 ( or NULL if none ) 
+#   8. Display string for enumerated value 2 ( or NULL if none ) 
+#   9. Display string for enumerated value 3 ( or NULL if none ) 
+# 
+#  Note(1): A line that begins with # is a comment
+#  Note(2): Remove any blank lines from the end of the file
+#
+Command Counter,       12,  1,  B, Dec, NULL,        NULL,        NULL,       NULL
+Error Counter,         13,  1,  B, Dec, NULL,        NULL,        NULL,       NULL  
+Sync To MET,           14,  1,  B, Dec, NULL,        NULL,        NULL,       NULL  
+Major Frame Source,    15,  1,  B, Dec, NULL,        NULL,        NULL,       NULL
+Act Success Cnt,       16,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Act Fail Cnt,          20,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Slots Processed,       24,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Skipped Slots Cnt,     28,  2,  H, Dec, NULL,        NULL,        NULL,       NULL
+Multiple Slot Cnt,     30,  2,  H, Dec, NULL,        NULL,        NULL,       NULL
+Same Slot Cnt,         32,  2,  H, Dec, NULL,        NULL,        NULL,       NULL
+Bad Table Data Cnt,    34,  2,  H, Dec, NULL,        NULL,        NULL,       NULL
+Tbl Ver Success Cnt,   36,  2,  H, Dec, NULL,        NULL,        NULL,       NULL
+Tbl Ver Failure Cnt,   38,  2,  H, Dec, NULL,        NULL,        NULL,       NULL
+Table Pass Cnt,        40,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Valid Mjr Frm Cnt,     44,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Missed Mjr Frm Cnt,    48,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Unxpt Mjr Frm Cnt,     52,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Mnr Frm Since Tone,    56,  2,  H, Dec, NULL,        NULL,        NULL,       NULL
+Next Slot Number,      58,  2,  H, Dec, NULL,        NULL,        NULL,       NULL
+Last Sync MET Slot,    60,  2,  H, Dec, NULL,        NULL,        NULL,       NULL
+Ignore Major Frame,    62,  4,  I, Enm, No,          Yes,         NULL,       NULL
+Unxpctd Mjr Frm,       66,  4,  I, Dec, No,          Yes,         NULL,       NULL

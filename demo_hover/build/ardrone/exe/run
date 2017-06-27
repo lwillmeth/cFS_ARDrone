@@ -1,0 +1,3 @@
+#!/bin/sh
+./arm-linux.bin --reset PO 1
+

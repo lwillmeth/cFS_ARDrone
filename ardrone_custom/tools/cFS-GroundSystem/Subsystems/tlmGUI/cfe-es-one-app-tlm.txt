@@ -1,0 +1,37 @@
+# 
+# cfe-es-one-app-tlm.txt
+# 
+# This file should have the following comma delimited fields:
+#   1. Data item description
+#   2. Offset of data item in packet
+#   3. Length of data item
+#   4. Python data type of item ( using python struct library )
+#   5. Display type of item ( Currently Dec, Hex, Str, Enm ) 
+#   6. Display string for enumerated value 0 ( or NULL if none ) 
+#   7. Display string for enumerated value 1 ( or NULL if none ) 
+#   8. Display string for enumerated value 2 ( or NULL if none ) 
+#   9. Display string for enumerated value 3 ( or NULL if none ) 
+# 
+#  Note(1): A line that begins with # is a comment
+#  Note(2): Remove any blank lines from the end of the file
+#
+AppID,                  12,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Type,                   16,     4,      I,  Enm,    Core,   External,   NULL,   NULL 
+Name,                   20,     20,     s,  Str,    NULL,   NULL,       NULL,   NULL
+Entry Point,            40,     20,     s,  Str,    NULL,   NULL,       NULL,   NULL
+File Name,              60,     64,     s,  Str,    NULL,   NULL,       NULL,   NULL
+Stack Size,             124,    4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Module ID,              128,    4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Addresses Are Valid,    132,    4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Code Address,           136,    4,      I,  Hex,    NULL,   NULL,       NULL,   NULL
+Code Size,              140,    4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Data Address,           144,    4,      I,  Hex,    NULL,   NULL,       NULL,   NULL
+Data Size,              148,    4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+BSS Address,            152,    4,      I,  Hex,    NULL,   NULL,       NULL,   NULL
+BSS Size,               156,    4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Start Address,          160,    4,      I,  Hex,    NULL,   NULL,       NULL,   NULL
+Exception Action,       164,    2,      H,  Enm,    App Restart,   Proc Restart,       NULL,   NULL
+Priority,               166,    2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+Main Task ID,           168,    4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Execution Counter,      172,    4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Main Task Name,         176,    20,     s,  Str,    NULL,   NULL,       NULL,   NULL

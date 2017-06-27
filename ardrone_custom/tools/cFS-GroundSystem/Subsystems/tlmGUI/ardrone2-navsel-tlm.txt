@@ -1,0 +1,44 @@
+# ardrone2 application nav select data message.
+# ardrone2-navsel-tlm.txt
+# See ARDRONE2_NAVDATA_SELECT_MID and ARDrone2_NavData_Select_Msg_t
+# in ardrone2_msgs.h.
+# 
+# This file should have the following comma delimited fields:
+#   1. Data item description
+#   2. Offset of data item in packet
+#   3. Length of data item
+#   4. Python data type of item ( using python struct library )
+#      https://docs.python.org/2/library/struct.html#format-characters
+#   5. Display type of item ( Currently Dec, Hex, Str, Enm ) 
+#   6. Display string for enumerated value 0 ( or NULL if none ) 
+#   7. Display string for enumerated value 1 ( or NULL if none ) 
+#   8. Display string for enumerated value 2 ( or NULL if none ) 
+#   9. Display string for enumerated value 3 ( or NULL if none ) 
+# 
+#  Note(1): A line that begins with # is a comment
+#  Note(2): Remove any blank lines from the end of the file
+#
+CCSDS time (s),     6,  4,  I, Dec, NULL, NULL, NULL, NULL
+Ctrl State-Major,  12,  2,  h, Dec, NULL, NULL, NULL, NULL
+Ctrl State-Minor,  14,  2,  h, Dec, NULL, NULL, NULL, NULL
+Batt % (mV),       16,  4,  I, Dec, NULL, NULL, NULL, NULL
+Pitch (mdeg),      20,  4,  f, Dec, NULL, NULL, NULL, NULL
+Roll (mdeg),       24,  4,  f, Dec, NULL, NULL, NULL, NULL
+Yaw (mdeg),        28,  4,  f, Dec, NULL, NULL, NULL, NULL
+Altitude (mm),     32,  4,  I, Dec, NULL, NULL, NULL, NULL
+Velocity X (mm/s), 36,  4,  f, Dec, NULL, NULL, NULL, NULL
+Velocity Y (mm/s), 40,  4,  f, Dec, NULL, NULL, NULL, NULL
+Velocity Z (mm/s), 44,  4,  f, Dec, NULL, NULL, NULL, NULL
+Time (s),         164,  4,  I, Dec, NULL, NULL, NULL, NULL
+Time (usec),      168,  4,  I, Dec, NULL, NULL, NULL, NULL
+#mag x,            176,  2,  I, Dec, NULL, NULL, NULL, NULL
+#mag y,            178,  2,  I, Dec, NULL, NULL, NULL, NULL
+#mag z,            180,  2,  I, Dec, NULL, NULL, NULL, NULL
+#heading (unwrap), 220,  4,  f, Dec, NULL, NULL, NULL, NULL
+#heading gyro (unwrap),  224,  4,  f, Dec, NULL, NULL, NULL, NULL
+#heading fused (unwrap),  228,  4,  f, Dec, NULL, NULL, NULL, NULL
+#mag cal OK,       230,  1,  h, Dec, NULL, NULL, NULL, NULL
+#mag state,        232,  4,  f, Dec, NULL, NULL, NULL, NULL
+#mag radius,       236,  4,  f, Dec, NULL, NULL, NULL, NULL
+#err mean,         240,  4,  f, Dec, NULL, NULL, NULL, NULL
+#err var,          244,  4,  f, Dec, NULL, NULL, NULL, NULL

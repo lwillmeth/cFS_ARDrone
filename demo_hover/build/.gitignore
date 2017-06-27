@@ -1,0 +1,3 @@
+*.o
+/mission_inc/
+*.bin

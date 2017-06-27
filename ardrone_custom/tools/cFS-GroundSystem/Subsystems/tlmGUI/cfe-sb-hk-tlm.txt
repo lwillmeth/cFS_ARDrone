@@ -1,0 +1,31 @@
+# 
+# cfe-sb-hk-tlm.txt
+# 
+# This file should have the following comma delimited fields:
+#   1. Data item description
+#   2. Offset of data item in packet
+#   3. Length of data item
+#   4. Python data type of item ( using python struct library )
+#   5. Display type of item ( Currently Dec, Hex, Str, Enm ) 
+#   6. Display string for enumerated value 0 ( or NULL if none ) 
+#   7. Display string for enumerated value 1 ( or NULL if none ) 
+#   8. Display string for enumerated value 2 ( or NULL if none ) 
+#   9. Display string for enumerated value 3 ( or NULL if none ) 
+# 
+#  Note(1): A line that begins with # is a comment
+#  Note(2): Remove any blank lines from the end of the file
+#
+Command Counter,        12,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+Command Err Counter,    13,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+No Subscribers Count,   14,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+Msg Send Err Count,     15,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+Msg Receive Err Count,  16,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+Internal Err Count,     17,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+Create Pipe Err Count,  18,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+Subscribe Err Count,    19,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+Dup Subs Count,         21,     1,      B,  Dec,    NULL,   NULL,       NULL,   NULL
+Pipe Overflow Err,      24,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+Msg Limit Err Count,    26,     2,      H,  Dec,    NULL,   NULL,       NULL,   NULL
+Memory Pool Handle,     28,     4,      I,  Hex,    NULL,   NULL,       NULL,   NULL
+Memory In Use,          32,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Unmarked Memory,        36,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL

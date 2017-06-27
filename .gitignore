@@ -1,0 +1,9 @@
+/.settings/
+*.so
+*.pyc
+*.o
+demo_sc/
+demo_soln_ardwd/
+trac/
+trick_sim/
+tutorial*

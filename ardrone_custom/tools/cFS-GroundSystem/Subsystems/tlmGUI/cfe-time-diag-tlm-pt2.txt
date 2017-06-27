@@ -1,0 +1,43 @@
+# 
+# cfe-time-diag-tlm-pt2.txt
+# 
+# This file should have the following comma delimited fields:
+#   1. Data item description
+#   2. Offset of data item in packet
+#   3. Length of data item
+#   4. Python data type of item ( using python struct library )
+#   5. Display type of item ( Currently Dec, Hex, Str, Enm ) 
+#   6. Display string for enumerated value 0 ( or NULL if none ) 
+#   7. Display string for enumerated value 1 ( or NULL if none ) 
+#   8. Display string for enumerated value 2 ( or NULL if none ) 
+#   9. Display string for enumerated value 3 ( or NULL if none ) 
+# 
+#  Note(1): A line that begins with # is a comment
+#  Note(2): Remove any blank lines from the end of the file
+#
+One Time Adjust (secs), 108, 4, I, Dec, NULL,        NULL,        NULL,       NULL
+One Time Adjust (subs), 112, 4, I, Dec, NULL,        NULL,        NULL,       NULL
+1Hz Adjust (secs),    116,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+1Hz Adjust (subs),    120,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Signal Latch (secs), 124, 4, I, Dec, NULL,      NULL,        NULL,       NULL
+Tone Signal Latch (subs), 128, 4, I, Dec, NULL,      NULL,        NULL,       NULL
+Tone Data Latch (secs), 132, 4, I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Data Latch (subs), 136, 4, I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Match Count,     140,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Match Errors,    144,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Signal Count,    148,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Data Count,      152,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Int Count,       156,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Int Errors,      160,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Task Count,      164,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Version Count,   168,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Local Int Count, 172,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Local Task Count, 176, 4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Virtual MET,     180,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Min Elapsed,     184,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Max Elapsed,     188,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Max Local Clock (secs), 192, 4, I, Dec, NULL,   NULL,        NULL,       NULL
+Tone Max Local Clock (subs), 196, 4, I, Dec, NULL,   NULL,        NULL,       NULL
+Tone Over Limit,      200,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Tone Under Limit,     204,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Data Store Status,    208,  4,  I, Enm, NULL,        Error,       Bad,        New

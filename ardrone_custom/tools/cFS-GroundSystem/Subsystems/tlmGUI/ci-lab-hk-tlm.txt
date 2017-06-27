@@ -1,0 +1,25 @@
+# 
+# ci-lab-hk-tlm.txt
+# 
+# This file should have the following comma delimited fields:
+#   1. Data item description
+#   2. Offset of data item in packet
+#   3. Length of data item
+#   4. Python data type of item ( using python struct library )
+#   5. Display type of item ( Currently Dec, Hex, Str, Enm ) 
+#   6. Display string for enumerated value 0 ( or NULL if none ) 
+#   7. Display string for enumerated value 1 ( or NULL if none ) 
+#   8. Display string for enumerated value 2 ( or NULL if none ) 
+#   9. Display string for enumerated value 3 ( or NULL if none ) 
+# 
+#  Note(1): A line that begins with # is a comment
+#  Note(2): Remove any blank lines from the end of the file
+#
+# See ci_hk_tlm_t in ci_lab_msg.h
+#
+Cmd Error Count,  12,  1,  I, Dec, NULL, NULL, NULL, NULL
+Cmd Count,        13,  1,  I, Dec, NULL, NULL, NULL, NULL
+XSums Enabled,    14,  1,  B, Dec, NULL, NULL, NULL, NULL
+Socket Connected, 15,  1,  B, Dec, NULL, NULL, NULL, NULL
+IngestPackets,    24,  4,  I, Dec, NULL, NULL, NULL, NULL
+IngestErrors,     28,  4,  I, Dec, NULL, NULL, NULL, NULL

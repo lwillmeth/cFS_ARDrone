@@ -1,0 +1,61 @@
+# 
+# cfe-es-hk-tlm.txt
+# 
+# This file should have the following comma delimited fields:
+#   1. Data item description
+#   2. Offset of data item in packet
+#   3. Length of data item
+#   4. Python data type of item ( using python struct library )
+#   5. Display type of item ( Currently Dec, Hex, Str, Enm ) 
+#   6. Display string for enumerated value 0 ( or NULL if none ) 
+#   7. Display string for enumerated value 1 ( or NULL if none ) 
+#   8. Display string for enumerated value 2 ( or NULL if none ) 
+#   9. Display string for enumerated value 3 ( or NULL if none ) 
+# 
+#  Note(1): A line that begins with # is a comment
+#  Note(2): Remove any blank lines from the end of the file
+#
+Command Counter,       12,  1,  B, Dec, NULL,        NULL,        NULL,       NULL
+Error Counter,         13,  1,  B, Dec, NULL,        NULL,        NULL,       NULL  
+cFE Core Checksum,     14,  2,  H, Hex, NULL,        NULL,        NULL,       NULL  
+cFE Major Version,     16,  1,  B, Dec, NULL,        NULL,        NULL,       NULL  
+cFE Minor Version,     17,  1,  B, Dec, NULL,        NULL,        NULL,       NULL  
+cFE Revision,          18,  1,  B, Dec, NULL,        NULL,        NULL,       NULL 
+cFE Mission Revision,  19,  1,  B, Dec, NULL,        NULL,        NULL,       NULL 
+OSAL Major Version,    20,  1,  B, Dec, NULL,        NULL,        NULL,       NULL 
+OSAL Minor Version,    21,  1,  B, Dec, NULL,        NULL,        NULL,       NULL
+OSAL Revision,         22,  1,  B, Dec, NULL,        NULL,        NULL,       NULL
+OSAL Mission Rev,      23,  1,  B, Dec, NULL,        NULL,        NULL,       NULL
+Syslog Bytes Used,     24,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Syslog Size,           28,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Syslog Entries,        32,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Syslog Mode,           36,  4,  I, Enm, Overwrite,   Discard,     NULL,       NULL 
+ERlog Index,           40,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+ERlog Entries,         44,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Registered Core Apps,  48,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Registered CFS Apps,   52,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Registered Tasks,      56,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Registered Libs,       60,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Reset Type,            64,  4,  I, Enm, NULL,        Processor,   Power On,   Application
+Reset Subtype,         68,  4,  I, Enm, NULL,        Power Cycle, Push Button, HM Spec Cmd
+Processor Resets,      72,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Max Proc Resets,       76,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Boot Source,           80,  4,  I, Enm, BootSrc0,    BootSrc1,    BootSrc2,   BootSrc3 
+Perf Mon State,        84,  4,  I, Enm, Idle,        Wait,        Triggered,  NULL 
+Perf Mon Mode,         88,  4,  I, Enm, Start,       Center,      End,        NULL
+Perf Trigger Count,    92,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Perf Filter Mask 0,    96,  4,  I, Hex, NULL,        NULL,        NULL,       NULL
+Perf Filter Mask 1,    100, 4,  I, Hex, NULL,        NULL,        NULL,       NULL
+Perf Filter Mask 2,    104, 4,  I, Hex, NULL,        NULL,        NULL,       NULL
+Perf Filter Mask 3,    108, 4,  I, Hex, NULL,        NULL,        NULL,       NULL
+Perf Trigger Mask 0,   112, 4,  I, Hex, NULL,        NULL,        NULL,       NULL
+Perf Trigger Mask 1,   116, 4,  I, Hex, NULL,        NULL,        NULL,       NULL
+Perf Trigger Mask 2,   120, 4,  I, Hex, NULL,        NULL,        NULL,       NULL
+Perf Trigger Mask 3,   124, 4,  I, Hex, NULL,        NULL,        NULL,       NULL
+Perf Data Start,       128, 4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Perf Data End,         132, 4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Perf Data Count,       136, 4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Perf Data To Write,    140, 4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Heap Bytes Free,       144, 4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Heap Blocks Free,      148, 4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Heap Max Blk Size,     152, 4,  I, Dec, NULL,        NULL,        NULL,       NULL

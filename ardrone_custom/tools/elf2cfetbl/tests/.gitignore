@@ -1,0 +1,7 @@
+*.tbl
+*.bin
+*.o
+elf2cfetbl
+*~
+linux
+ut699-vxworks6

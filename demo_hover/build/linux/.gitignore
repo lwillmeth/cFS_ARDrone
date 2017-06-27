@@ -1,0 +1,4 @@
+elf2cfetbl
+*.tbl
+exe/cf
+exe/ram

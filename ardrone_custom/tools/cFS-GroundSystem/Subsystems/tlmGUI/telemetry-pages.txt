@@ -1,0 +1,31 @@
+# 
+# telemetry-pages.txt
+# 
+# This file should have the following comma delimited fields:
+#   1. Description
+#   2. Python class to handle the telemetry packets
+#   3. Packet ID in hex
+#   4. Telemetry definition file, or null 
+# 
+#  Note(1): A line that begins with # is a comment
+#  Note(2): Remove any blank lines from the end of the file
+#
+Event Messages,                     EventMessage.py,         0x808,   null
+Executive,                          GenericTelemetry.py,     0x800,   cfe-es-hk-tlm.txt
+ES - One App Tlm,                   GenericTelemetry.py,     0x80b,   cfe-es-one-app-tlm.txt
+ES - Pool Stats,                    GenericTelemetry.py,     0x810,   cfe-es-pool-stats-tlm.txt
+Event Services (pt1),               GenericTelemetry.py,     0x801,   cfe-evs-hk-tlm-pt1.txt
+Event Services (pt2),               GenericTelemetry.py,     0x801,   cfe-evs-hk-tlm-pt2.txt
+Event Services (pt3),               GenericTelemetry.py,     0x801,   cfe-evs-hk-tlm-pt3.txt
+Software Bus,                       GenericTelemetry.py,     0x803,   cfe-sb-hk-tlm.txt
+Software Bus Stats,                 GenericTelemetry.py,     0x80a,   cfe-sb-stats-tlm.txt
+Table Services,                     GenericTelemetry.py,     0x804,   cfe-tbl-hk-tlm.txt
+Time Services,                      GenericTelemetry.py,     0x805,   cfe-time-hk-tlm.txt
+Time - Diag (pt1),                  GenericTelemetry.py,     0x806,   cfe-time-diag-tlm-pt1.txt
+Time - Diag (pt2),                  GenericTelemetry.py,     0x806,   cfe-time-diag-tlm-pt2.txt
+Telemetry Output,                   GenericTelemetry.py,     0x880,   cfs-to-lab-hk-tlm.txt
+Command Ingest,                     GenericTelemetry.py,     0x884,   cfs-ci-lab-hk-tlm.txt
+SCH,                                GenericTelemetry.py,     0x897,   cfs-sch-hk-tlm.txt
+SC HK,                              GenericTelemetry.py,     0x08AA,  cfs-sc-hk-tlm.txt
+ardrone2 HK,                        GenericTelemetry.py,     0x820,   ardrone2-hk-tlm.txt
+ardrone2 NAVSel,                    GenericTelemetry.py,     0x824,   ardrone2-navsel-tlm.txt

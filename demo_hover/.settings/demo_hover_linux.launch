@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.cdt.launch.applicationLaunchType">
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.DEBUG_NAME" value="gdb"/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.GDB_INIT" value=".gdbinit"/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.commandFactory" value="org.eclipse.cdt.debug.mi.core.standardLinuxCommandFactory"/>
+<booleanAttribute key="org.eclipse.cdt.debug.mi.core.verboseMode" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.dsf.gdb.AUTO_SOLIB" value="true"/>
+<listAttribute key="org.eclipse.cdt.dsf.gdb.AUTO_SOLIB_LIST"/>
+<stringAttribute key="org.eclipse.cdt.dsf.gdb.DEBUG_NAME" value="gdb"/>
+<booleanAttribute key="org.eclipse.cdt.dsf.gdb.DEBUG_ON_FORK" value="false"/>
+<stringAttribute key="org.eclipse.cdt.dsf.gdb.GDB_INIT" value="/home/cfs/course/demo_hover/build/linux/exe/gdbinit"/>
+<booleanAttribute key="org.eclipse.cdt.dsf.gdb.NON_STOP" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.dsf.gdb.REVERSE" value="false"/>
+<listAttribute key="org.eclipse.cdt.dsf.gdb.SOLIB_PATH"/>
+<stringAttribute key="org.eclipse.cdt.dsf.gdb.TRACEPOINT_MODE" value="TP_NORMAL_ONLY"/>
+<booleanAttribute key="org.eclipse.cdt.dsf.gdb.UPDATE_THREADLIST_ON_SUSPEND" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.dsf.gdb.USE_SOLIB_SYMBOLS_FOR_APP" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.dsf.gdb.internal.ui.launching.LocalApplicationCDebuggerTab.DEFAULTS_SET" value="true"/>
+<intAttribute key="org.eclipse.cdt.launch.ATTR_BUILD_BEFORE_LAUNCH_ATTR" value="0"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="gdb"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="run"/>
+<booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN_SYMBOL" value="main"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_ARGUMENTS" value="--reset P0 1"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="build/linux/exe/core-linux.bin"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="demo_hover"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="cdt.managedbuild.toolchain.gnu.base.2011255483"/>
+<stringAttribute key="org.eclipse.cdt.launch.WORKING_DIRECTORY" value="${workspace_loc:demo_hover}/build/linux/exe"/>
+<booleanAttribute key="org.eclipse.cdt.launch.use_terminal" value="true"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/demo_hover"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+</launchConfiguration>

@@ -1,0 +1,73 @@
+# 
+# cfe-es-pool-stats-tlm.txt
+# 
+# This file should have the following comma delimited fields:
+#   1. Data item description
+#   2. Offset of data item in packet
+#   3. Length of data item
+#   4. Python data type of item ( using python struct library )
+#   5. Display type of item ( Currently Dec, Hex, Str, Enm ) 
+#   6. Display string for enumerated value 0 ( or NULL if none ) 
+#   7. Display string for enumerated value 1 ( or NULL if none ) 
+#   8. Display string for enumerated value 2 ( or NULL if none ) 
+#   9. Display string for enumerated value 3 ( or NULL if none ) 
+# 
+#  Note(1): A line that begins with # is a comment
+#  Note(2): Remove any blank lines from the end of the file
+#
+Handle,                 12,     4,      I,  Hex,    NULL,   NULL,       NULL,   NULL
+Size,                   16,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Num Blocks Requested,   20,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Check Err Ctr,          24,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+Num Free Bytes,         28,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+0: Block Size,          32,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+0: Num Created,         36,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+0: Num Free,            40,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+1: Block Size,          32,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+1: Num Created,         36,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+1: Num Free,            40,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+2: Block Size,          32,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+2: Num Created,         36,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+2: Num Free,            40,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+3: Block Size,          32,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+3: Num Created,         36,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+3: Num Free,            40,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+4: Block Size,          32,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+4: Num Created,         36,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+4: Num Free,            40,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+5: Block Size,          32,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+5: Num Created,         36,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+5: Num Free,            40,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+6: Block Size,          32,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+6: Num Created,         36,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+6: Num Free,            40,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+7: Block Size,          32,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+7: Num Created,         36,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+7: Num Free,            40,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+8: Block Size,          32,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+8: Num Created,         36,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+8: Num Free,            40,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+9: Block Size,          32,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+9: Num Created,         36,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+9: Num Free,            40,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+10: Block Size,         44,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+10: Num Created,        48,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+10: Num Free,           52,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+11: Block Size,         56,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+11: Num Created,        60,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+11: Num Free,           64,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+12: Block Size,         68,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+12: Num Created,        72,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+12: Num Free,           76,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+13: Block Size,         80,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+13: Num Created,        84,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+13: Num Free,           88,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+14: Block Size,         92,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+14: Num Created,        96,     4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+14: Num Free,           100,    4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+15: Block Size,         104,    4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+15: Num Created,        108,    4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+15: Num Free,           112,    4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+16: Block Size,         116,    4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+16: Num Created,        120,    4,      I,  Dec,    NULL,   NULL,       NULL,   NULL
+16: Num Free,           124,    4,      I,  Dec,    NULL,   NULL,       NULL,   NULL

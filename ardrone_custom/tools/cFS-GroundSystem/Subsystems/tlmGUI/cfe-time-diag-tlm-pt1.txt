@@ -1,0 +1,47 @@
+# 
+# cfe-time-diag-tlm-pt1.txt
+# 
+# This file should have the following comma delimited fields:
+#   1. Data item description
+#   2. Offset of data item in packet
+#   3. Length of data item
+#   4. Python data type of item ( using python struct library )
+#   5. Display type of item ( Currently Dec, Hex, Str, Enm ) 
+#   6. Display string for enumerated value 0 ( or NULL if none ) 
+#   7. Display string for enumerated value 1 ( or NULL if none ) 
+#   8. Display string for enumerated value 2 ( or NULL if none ) 
+#   9. Display string for enumerated value 3 ( or NULL if none ) 
+# 
+#  Note(1): A line that begins with # is a comment
+#  Note(2): Remove any blank lines from the end of the file
+#
+MET At Tone (secs),    12,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+MET At Tone (subs),    16,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+STCF At Tone (secs),   20,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+STCF At Tone (subs),   24,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Delay At Tone (secs),  28,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Delay At Tone (subs),  32,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Latch At Tone (secs),  36,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Latch At Tone (subs),  40,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+Leaps At Tone,         44,  2,  H, Dec, NULL,        NULL,        NULL,       NULL  
+API State,             46,  2,  H, Hex, NULL,        NULL,        NULL,       NULL  
+Time Since Tone (secs), 48, 4,  I, Dec, NULL,        NULL,        NULL,       NULL  
+Time Since Tone (subs), 52, 4,  I, Dec, NULL,        NULL,        NULL,       NULL  
+Latch Current (secs),  56,  4,  I, Dec, NULL,        NULL,        NULL,       NULL 
+Latch Current (subs),  60,  4,  I, Dec, NULL,        NULL,        NULL,       NULL 
+MET Current (secs),    64,  4,  I, Dec, NULL,        NULL,        NULL,       NULL 
+MET Current (subs),    68,  4,  I, Dec, NULL,        NULL,        NULL,       NULL
+TAI Current (secs),    72,  4,  I, Dec, NULL,        NULL,        NULL,       NULL 
+TAI Current (subs),    76,  4,  I, Dec, NULL,        NULL,        NULL,       NULL 
+UTC Current (secs),    80,  4,  I, Dec, NULL,        NULL,        NULL,       NULL 
+UTC Current (subs),    84,  4,  I, Dec, NULL,        NULL,        NULL,       NULL 
+Set State,             88,  2,  H, Enm, Not Set,     Set,         NULL,       NULL
+Fly State,             90,  2,  H, Enm, Not Flywheeling, Flywheeling, NULL,   NULL
+Source,                92,  2,  H, Enm, Internal,    External,    NULL,       NULL
+Signal,                94,  2,  H, Enm, Primary,     Redundant,   NULL,       NULL
+Server Fly State,      96,  2,  H, Enm, Not Flywheeling, Flywheeling, NULL,   NULL
+Forced to Fly,         98,  2,  H, Enm, False,       True,        NULL,       NULL
+State Flags,          100,  2,  H, Hex, NULL,        NULL,        NULL,       NULL
+One Time Direction,   102,  2,  H, Dec, NULL,        Add,         Subtract,   NULL
+One Hz Direction,     104,  2,  H, Dec, NULL,        Add,         Subtract,   NULL
+Delay Direction,      106,  2,  H, Dec, NULL,        Add,         Subtract,   NULL

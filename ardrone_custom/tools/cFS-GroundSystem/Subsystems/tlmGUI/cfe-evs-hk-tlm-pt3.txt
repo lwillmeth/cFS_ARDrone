@@ -1,0 +1,47 @@
+# 
+# cfe-evs-hk-tlm-pt3.txt
+# 
+# This file should have the following comma delimited fields:
+#   1. Data item description
+#   2. Offset of data item in packet
+#   3. Length of data item
+#   4. Python data type of item ( using python struct library )
+#   5. Display type of item ( Currently Dec, Hex, Str, Enm ) 
+#   6. Display string for enumerated value 0 ( or NULL if none ) 
+#   7. Display string for enumerated value 1 ( or NULL if none ) 
+#   8. Display string for enumerated value 2 ( or NULL if none ) 
+#   9. Display string for enumerated value 3 ( or NULL if none ) 
+# 
+#  Note(1): A line that begins with # is a comment
+#  Note(2): Remove any blank lines from the end of the file
+#
+22: App ID,             204,  4,  I, Dec,    NULL,       NULL,       NULL,   NULL
+22: Msg Sent Counter,   208,  2,  H, Dec,    NULL,       NULL,       NULL,   NULL
+22: Status,             210,  1,  B, Enm,    Disabled,   Enabled,    NULL,   NULL
+23: App ID,             212,  4,  I, Dec,    NULL,       NULL,       NULL,   NULL
+23: Msg Sent Counter,   216,  2,  H, Dec,    NULL,       NULL,       NULL,   NULL
+23: Status,             218,  1,  B, Enm,    Disabled,   Enabled,    NULL,   NULL
+24: App ID,             220,  4,  I, Dec,    NULL,       NULL,       NULL,   NULL
+24: Msg Sent Counter,   224,  2,  H, Dec,    NULL,       NULL,       NULL,   NULL
+24: Status,             226,  1,  B, Enm,    Disabled,   Enabled,    NULL,   NULL
+25: App ID,             228,  4,  I, Dec,    NULL,       NULL,       NULL,   NULL
+25: Msg Sent Counter,   232,  2,  H, Dec,    NULL,       NULL,       NULL,   NULL
+25: Status,             234,  1,  B, Enm,    Disabled,   Enabled,    NULL,   NULL
+26: App ID,             236,  4,  I, Dec,    NULL,       NULL,       NULL,   NULL
+26: Msg Sent Counter,   240,  2,  H, Dec,    NULL,       NULL,       NULL,   NULL
+26: Status,             242,  1,  B, Enm,    Disabled,   Enabled,    NULL,   NULL
+27: App ID,             246,  4,  I, Dec,    NULL,       NULL,       NULL,   NULL
+27: Msg Sent Counter,   248,  2,  H, Dec,    NULL,       NULL,       NULL,   NULL
+27: Status,             250,  1,  B, Enm,    Disabled,   Enabled,    NULL,   NULL
+28: App ID,             252,  4,  I, Dec,    NULL,       NULL,       NULL,   NULL
+28: Msg Sent Counter,   256,  2,  H, Dec,    NULL,       NULL,       NULL,   NULL
+28: Status,             258,  1,  B, Enm,    Disabled,   Enabled,    NULL,   NULL
+29: App ID,             262,  4,  I, Dec,    NULL,       NULL,       NULL,   NULL
+29: Msg Sent Counter,   266,  2,  H, Dec,    NULL,       NULL,       NULL,   NULL
+29: Status,             268,  1,  B, Enm,    Disabled,   Enabled,    NULL,   NULL
+30: App ID,             270,  4,  I, Dec,    NULL,       NULL,       NULL,   NULL
+30: Msg Sent Counter,   274,  2,  H, Dec,    NULL,       NULL,       NULL,   NULL
+30: Status,             276,  1,  B, Enm,    Disabled,   Enabled,    NULL,   NULL
+31: App ID,             278,  4,  I, Dec,    NULL,       NULL,       NULL,   NULL
+31: Msg Sent Counter,   282,  2,  H, Dec,    NULL,       NULL,       NULL,   NULL
+31: Status,             284,  1,  B, Enm,    Disabled,   Enabled,    NULL,   NULL

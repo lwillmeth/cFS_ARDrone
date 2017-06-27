@@ -1,0 +1,7 @@
+#./core-linux.bin --reset PO 1
+#
+# run CFS process (and child threads) only on designated
+# core (-c core_#)
+taskset -c 0 ./core-linux.bin --reset PO 1
+
+#core-linux.bin PO 1
