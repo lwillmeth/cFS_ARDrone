@@ -205,9 +205,7 @@ void ARDrone2_ATCmdMain(void)
     {
         ARDrone2_RcvATCmds();
         OS_TaskDelay(30);
-        if(CurAttitude.isTilted){
-        	ARDrone2_Drift_Towards_Level();
-        }
+    	ARDrone2_Drift_Towards_Level();
     }
 
     OS_printf("ARDrone2: ATCmd exiting main loop.\n");
@@ -1010,7 +1008,7 @@ void ARDrone2_climb(float vSpeed)
     /* Out of range > 100% of max speed value */
     if(vSpeed > 1 || vSpeed < -1)
     {
-        return;                              
+        return;
     }
 
     CurAttitude.vSpeed = vSpeed;
@@ -1110,7 +1108,12 @@ void ARDrone2_Drift_Towards_Level()
  */
 int ARDrone2_Update_Attitude_Flag(void)
 {
-	CurAttitude.isTilted = (CurAttitude.roll + CurAttitude.pitch + CurAttitude.vSpeed + CurAttitude.ySpeed == 0);
+	if(CurAttitude.roll || CurAttitude.pitch || CurAttitude.vSpeed || CurAttitude.ySpeed){
+		// If any of the target attitudes still exist, we need to keep tilting back to level
+		CurAttitude.isTilted = 1;
+	} else {
+		CurAttitude.isTilted = 0;
+	}
 	return CurAttitude.isTilted;
 }
 
