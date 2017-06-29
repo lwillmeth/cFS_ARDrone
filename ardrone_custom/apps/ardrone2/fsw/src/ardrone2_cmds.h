@@ -78,6 +78,8 @@
 #define ARDRONE2_YAW_ABS_CC             111  // yaw based on absolute magnetometer
 #define ARDRONE2_MAG_CAL                112  // in-flight calibrate magnetometer
 
+// Amount that the drone drifts back towards being level
+#define ARDRONE2_DRIFT_AMOUNT           0.05
 
 typedef enum
 {
@@ -89,6 +91,19 @@ typedef enum
   ACK_CONTROL_MODE,             /**< Reset command mask in navdata */
   CUSTOM_CFG_GET_CONTROL_MODE   /**< Requests the list of custom config. IDs */
 } ARDrone2_ControlMode_t;
+
+
+/* Amount of movement remaining, used to smooth out movement commands
+ *
+ */
+typedef struct
+{
+    int isTilted;          	 /** flag indication if the drone needs correction, 0 = drone is level, 1 = needs to level out */
+    float roll;
+    float pitch;
+    float vSpeed;
+	float ySpeed;
+} ARDrone2_attitude;
 
 
 /*

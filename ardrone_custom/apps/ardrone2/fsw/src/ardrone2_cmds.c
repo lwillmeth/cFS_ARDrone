@@ -80,6 +80,9 @@ void ARDrone2_cmdComWdg(void);
 void ARDrone2_resetCmdSeq(void);
 int ARDrone2_incrAtCmdSeq(void);
 void ARDrone2_ATCmdCleanupCallback(void);
+void ARDrone2_Drift_Towards_Level();
+float ARDrone2_Reduce_Angle(float);
+int ARDrone2_Update_Attitude_Flag(void);
 
 /*
 ** Local Structure Declarations
@@ -160,6 +163,8 @@ struct sockaddr_in  CmdSocketAddress;
 struct sockaddr_in  CmdARDroneAddress;
 int                 CmdSequence;
 int                 ATCmdSocketID;
+ARDrone2_attitude	CurAttitude;
+
 
 void delay(unsigned int mseconds)
 {
@@ -200,6 +205,9 @@ void ARDrone2_ATCmdMain(void)
     {
         ARDrone2_RcvATCmds();
         OS_TaskDelay(30);
+        if(CurAttitude.isTilted){
+        	ARDrone2_Drift_Towards_Level();
+        }
     }
 
     OS_printf("ARDrone2: ATCmd exiting main loop.\n");
@@ -757,6 +765,13 @@ void ARDrone2_setFlatTrim(void)
     char cmd[100];
     int seq;
 
+    // Reset desired movements to zero
+    CurAttitude.isTilted 	= 1;
+    CurAttitude.roll 		= 0;
+    CurAttitude.pitch 		= 0;
+    CurAttitude.vSpeed 		= 0;
+    CurAttitude.ySpeed		= 0;
+
     /* Unknown setting, but needed apparently */
     memset(cmd, 0x0, sizeof(cmd));
     seq = ARDrone2_incrAtCmdSeq();
@@ -862,6 +877,13 @@ void ARDrone2_hover(void)
     float vSpeed = 0;   // Vertical speed
     float ySpeed = 0;   // Yaw / spin
 
+    // Reset desired movements to zero
+    CurAttitude.isTilted 	= 0;
+    CurAttitude.roll 		= 0;
+    CurAttitude.pitch 		= 0;
+    CurAttitude.vSpeed 		= 0;
+    CurAttitude.ySpeed		= 0;
+
     ARDrone2_move(opt, roll, pitch, vSpeed, ySpeed);
 }
 
@@ -874,10 +896,10 @@ void ARDrone2_hover(void)
  */
 void ARDrone2_pitch(float pitch)
 {
-    int opt = 1;         // Set to consider other params 
-    float roll = 0;      // Roll
-    float vSpeed = 0;    // Vertical speed
-    float ySpeed = 0;    // Yaw / spin
+//    int opt = 1;         // Set to consider other params
+//    float roll = 0;      // Roll
+//    float vSpeed = 0;    // Vertical speed
+//    float ySpeed = 0;    // Yaw / spin
 
     /* Out of range > 100% of max inclination value */
     if(pitch > 1 || pitch < -1)
@@ -885,9 +907,10 @@ void ARDrone2_pitch(float pitch)
         return;
     }
 
-    ARDrone2_move(opt, roll, pitch, vSpeed, ySpeed);
-    OS_TaskDelay(500);
-    ARDrone2_move(opt, roll, 0, vSpeed, ySpeed);
+    CurAttitude.pitch = pitch;
+//    ARDrone2_move(opt, roll, pitch, vSpeed, ySpeed);
+//    OS_TaskDelay(500);
+//    ARDrone2_move(opt, roll, 0, vSpeed, ySpeed);
 }
 
 
@@ -899,10 +922,10 @@ void ARDrone2_pitch(float pitch)
  */
 void ARDrone2_roll(float roll)
 {
-    int opt = 1;           // Set to consider other params 
-    float pitch = 0;       // Pitch
-    float vSpeed = 0;      // Vertical speed
-    float ySpeed = 0;      // Yaw / spin
+//    int opt = 1;           // Set to consider other params
+//    float pitch = 0;       // Pitch
+//    float vSpeed = 0;      // Vertical speed
+//    float ySpeed = 0;      // Yaw / spin
 
     /* Out of range > 100% of max inclination value */
     if(roll > 1 || roll < -1)
@@ -910,9 +933,10 @@ void ARDrone2_roll(float roll)
         return;                              
     }
 
-    ARDrone2_move(opt, roll, pitch, vSpeed, ySpeed);
-    OS_TaskDelay(200);
-    ARDrone2_move(opt, 0, pitch, vSpeed, ySpeed);
+    CurAttitude.roll = roll;
+//    ARDrone2_move(opt, roll, pitch, vSpeed, ySpeed);
+//    OS_TaskDelay(200);
+//    ARDrone2_move(opt, 0, pitch, vSpeed, ySpeed);
 }
 
 
@@ -925,10 +949,10 @@ void ARDrone2_roll(float roll)
  */
 void ARDrone2_rollWithCombinedYaw(float roll)
 {
-    int opt = 3;          // Set bits 1 and 2 = 1
-    float pitch = 0;      // Pitch
-    float vSpeed = 0;     // Vertical speed
-    float ySpeed = 0;     // Yaw / spin
+//    int opt = 3;          // Set bits 1 and 2 = 1
+//    float pitch = 0;      // Pitch
+//    float vSpeed = 0;     // Vertical speed
+//    float ySpeed = 0;     // Yaw / spin
 
     /* Out of range > 100% of max inclination value */
     if(roll > 1 || roll < -1)
@@ -936,9 +960,9 @@ void ARDrone2_rollWithCombinedYaw(float roll)
         return;                              
     }
 
-    ARDrone2_move(opt, roll, pitch, vSpeed, ySpeed);
-    OS_TaskDelay(200);
-    ARDrone2_move(opt, 0, pitch, vSpeed, ySpeed);
+//    ARDrone2_move(opt, roll, pitch, vSpeed, ySpeed);
+//    OS_TaskDelay(200);
+//    ARDrone2_move(opt, 0, pitch, vSpeed, ySpeed);
 }
 
 
@@ -951,10 +975,10 @@ void ARDrone2_rollWithCombinedYaw(float roll)
  */
 void ARDrone2_yaw(float ySpeed)
 {
-    int opt = 1;         // Set to consider other params 
-    float roll = 0;      // Roll
-    float pitch = 0;     // Pitch
-    float vSpeed = 0;    // Vertical speed
+//    int opt = 1;         // Set to consider other params
+//    float roll = 0;      // Roll
+//    float pitch = 0;     // Pitch
+//    float vSpeed = 0;    // Vertical speed
 
     /* Out of range > 100% of max speed value */
     if(ySpeed > 1 || ySpeed < -1)
@@ -962,9 +986,10 @@ void ARDrone2_yaw(float ySpeed)
         return;                              
     }
 
-    ARDrone2_move(opt, roll, pitch, vSpeed, ySpeed);
-    OS_TaskDelay(150);
-    ARDrone2_move(opt, roll, pitch, vSpeed, 0);
+    CurAttitude.ySpeed = ySpeed;
+//    ARDrone2_move(opt, roll, pitch, vSpeed, ySpeed);
+//    OS_TaskDelay(150);
+//    ARDrone2_move(opt, roll, pitch, vSpeed, 0);
 }
 
 
@@ -977,10 +1002,10 @@ void ARDrone2_yaw(float ySpeed)
  */
 void ARDrone2_climb(float vSpeed)
 {
-    int opt = 1;         // Set to consider other params 
-    float roll = 0;      // Roll
-    float pitch = 0;     // Pitch
-    float ySpeed = 0;    // Yaw / spin
+//    int opt = 1;         // Set to consider other params
+//    float roll = 0;      // Roll
+//    float pitch = 0;     // Pitch
+//    float ySpeed = 0;    // Yaw / spin
 
     /* Out of range > 100% of max speed value */
     if(vSpeed > 1 || vSpeed < -1)
@@ -988,9 +1013,10 @@ void ARDrone2_climb(float vSpeed)
         return;                              
     }
 
-    ARDrone2_move(opt, roll, pitch, vSpeed, ySpeed);
-    OS_TaskDelay(200);
-    ARDrone2_move(opt, roll, pitch, 0, ySpeed);
+    CurAttitude.vSpeed = vSpeed;
+//    ARDrone2_move(opt, roll, pitch, vSpeed, ySpeed);
+//    OS_TaskDelay(200);
+//    ARDrone2_move(opt, roll, pitch, 0, ySpeed);
 }
 
 
@@ -1024,6 +1050,93 @@ void ARDrone2_move(int opt, float roll, float pitch, float vSpeed, float ySpeed)
 
     OS_printf("PCMD command: %s\n", cmd);
     ARDrone2_SendATCommand(cmd);
+}
+
+
+/*!
+ * @brief  General ARDrone function to drift towards level, from current desired angles
+ * @param  opt   0 = hover only (nulls out all rates, pitch, yaw, and roll),
+ *               1 = normal maneuver based on the other arguments
+ * @param  roll
+ * @param  pitch
+ * @param  vSpeed
+ * @param  ySpeed
+ *
+ * @note   ex: opt=0 and all other args=0.0 then it will hover and null out all rates and lateral velocity (with respect to ground)
+ *         ex: opt=1 and all other args=0.0 then it will hover but not null the rates and continue with lateral velocity (with respect to ground)
+ *         ex: opt=3 maneuver with combined yaw
+ * @return Void.
+ */
+void ARDrone2_Drift_Towards_Level()
+{
+	if ( CurAttitude.isTilted ){
+
+		CurAttitude.isTilted	= ARDrone2_Update_Attitude_Flag();
+
+		int opt = 1;
+
+		char cmd[100];
+		int seq = 0;
+		memset(cmd, 0x0, sizeof(cmd));
+
+		seq = ARDrone2_incrAtCmdSeq();
+
+		sprintf(cmd, "AT*PCMD=%d,%d,%d,%d,%d,%d\r", seq, opt,
+				*(int*) &CurAttitude.roll, *(int*) &CurAttitude.pitch,
+				*(int*) &CurAttitude.vSpeed, *(int*) &CurAttitude.ySpeed);
+
+		OS_printf("PCMD command: %s\n", cmd);
+		ARDrone2_SendATCommand(cmd);
+
+		// Reduce the attitude angles for the next iteration
+		CurAttitude.roll 		= ARDrone2_Reduce_Angle(CurAttitude.roll);
+		CurAttitude.pitch 		= ARDrone2_Reduce_Angle(CurAttitude.pitch);
+		CurAttitude.vSpeed 		= ARDrone2_Reduce_Angle(CurAttitude.vSpeed);
+		CurAttitude.ySpeed		= ARDrone2_Reduce_Angle(CurAttitude.ySpeed);
+
+		// If drone WAS tilted but this made it level, it will need to loop 1 more time to finish leveling out
+		if(CurAttitude.isTilted == 0){
+					OS_printf("Drone has leveled out: roll=%f, Pitch=%f, vSpeedr=%f, ySpeed=%f\n",
+							CurAttitude.roll, CurAttitude.pitch,
+							CurAttitude.vSpeed, CurAttitude.ySpeed);
+		}
+	}
+}
+
+
+/*!
+ * @brief  Set the CurAttitude.isTilted flag based on other fields in CurAttitude
+ * @return new flag status
+ */
+int ARDrone2_Update_Attitude_Flag(void)
+{
+	CurAttitude.isTilted = (CurAttitude.roll + CurAttitude.pitch + CurAttitude.vSpeed + CurAttitude.ySpeed == 0);
+	return CurAttitude.isTilted;
+}
+
+
+/*!
+ * @brief  Gently reduce angle back towards zero
+ * @param  angle from -1 to 1
+ * @return Float angle
+ */
+float ARDrone2_Reduce_Angle(float angle)
+{
+	if(angle > 0)
+	{
+		angle -= ARDRONE2_DRIFT_AMOUNT;
+		if(angle < ARDRONE2_DRIFT_AMOUNT)
+		{
+			return 0;
+		}
+	}else{
+		angle += ARDRONE2_DRIFT_AMOUNT;
+		if(angle > ARDRONE2_DRIFT_AMOUNT)
+		{
+			return 0;
+		}
+	}
+	return angle;
 }
 
 
